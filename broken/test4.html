@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+  
+	<link rel="stylesheet" href="themes/green.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	
+
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="jquery.mobile-1.4.5.js"></script>
+  <script src="jquery.mobile.subpage.js"></script>
+  
+  <script src="test_code.js"></script>
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/c9e29dd1-fb3c-4230-b1c2-cac3e9f45fc2.css">
+  
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+				
+  
+</head>
+<style>
+
+.round_buttons {
+    width: 3em !important;
+    height: 3em !important;
+	padding: 0.2em !important;
+    border-radius: 50% !important;
+
+}
+
+.progress div a.ui-btn{
+	text-shadow:none;
+}
+
+#class-result a{
+	border-bottom-right-radius: 30px;
+	border-top-right-radius: 30px;
+
+}
+
+
+
+
+
+.ui-btn.ui-state-disabled {
+border-color: #999999 !important;
+	color: #999999 !important;
+    opacity:1;
+    cursor: default !important;
+    pointer-events: none;
+}
+
+.ui-btn {
+    font-size: 14px;
+    font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+}
+
+
+.ui-focus,
+.ui-btn:focus {
+		-webkit-box-shadow: 0 0 0px #FF0000 !important/*{a-active-background-color}*/;
+		-moz-box-shadow: 0 0 0px #FF0000 !important/*{a-active-background-color}*/;
+		box-shadow: 0 0 0px #FF0000 !important/*{a-active-background-color}*/;
+}
+
+
+
+
+#lifeguard_title {
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+#lifeguard_subtitle {
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 22px;
+	text-align: center;
+}
+
+@media only screen 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) { 
+    #lifeguard_title {
+        font-size: 20px;
+    }
+	#lifeguard_subtitle {
+		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+		font-weight: 400;
+		font-style: normal;
+		font-size: 14px;
+		text-align: center;
+	}
+}
+
+
+#lifeguard_body_text_title {
+	color:#1AB394;
+	font-family: 'Univers LT W01 65 Bold', 'Univers LT Std';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 16px;
+	-webkit-padding-start: 30px;
+}
+
+p.lifeguard_body_text {
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+}
+
+.do_not_display {
+	visibility:hidden;
+}
+
+.available_after_age {
+	width:40% !important;
+	text-align: center;
+	color: #999999;
+	font-size: 14px;
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+}
+.available_after_age p{
+	margin-left:10px;
+	margin-right:10px;
+	color: #999999;
+	border-bottom: 0.1em solid #999999;
+	font-size: 14px;
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+}
+
+@media only screen 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) { 
+	.available_after_age {
+		width:100% !important;
+		text-align: left;
+		color: #999999;
+		font-size: 16px;
+		font-family: 'Univers LT W01 45 Light', 'Univers LT Std';
+	}
+	.available_after_age p{
+		margin-left:10px;
+		margin-right:10px;
+		color: #999999;
+		border-bottom: none;
+		font-size: 16px;
+		font-family: 'Univers LT W01 45 Light', 'Univers LT Std';
+	}
+}
+
+
+
+
+
+.available_after_age_general p{
+	margin-left:10px;
+	margin-right:10px;
+	text-align: center;
+	color: #999999;
+	border-bottom: 0.1em solid #999999;
+	font-size: 14px;
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+}
+@media only screen 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) { 
+	.available_after_age_general p{
+		margin-left:10px;
+		margin-right:10px;
+		text-align: center;
+		color: #999999;
+		border-bottom: none;
+		font-size: 16px;
+		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	}
+}
+
+
+#lifeguard_instructor_p3 .ui-block-a{
+	width:25% !important;
+}
+#lifeguard_instructor_p3 .ui-block-b{
+	width:50% !important;
+}
+#lifeguard_instructor_p3 .ui-block-c{
+	width:25% !important;
+}
+
+.vertical-align {
+	text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type none;
+}
+
+ol.progtrckr li.progtrckr-done {
+    color: black;
+    border-bottom: 4px solid yellowgreen;
+}
+
+p.step {
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	
+	color:#1AB394;
+	display: inline;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+p.afterstep {
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	
+	display: inline;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.line{
+    width: 1px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+}
+ #line1{
+     top: 140px;
+    left: 30px;
+ }
+.center-button{
+  margin: 0 auto;
+}
+.table-btns {
+  display: table;
+  border-spacing: 0.4em;
+  a {
+    display: table-cell;
+  }
+}
+
+
+.progress {
+  list-style: none;
+  font-size: 12pt;
+}
+.progress li {
+  border-left: 0.2em solid #00b587;
+  padding: 0 0 0.1em 2em;
+  position: relative;
+  padding-bottom:2em;
+}
+.progress li::before {
+  content: url("img/u169.png");
+  font-size: 2.5em;
+  position: absolute;
+  left: -0.41em;
+  top: -0.41em;
+}
+
+.progress li:last-child {
+  border-left: 0.2em solid transparent;
+  padding: 0 0 0.1em 2em;
+  position: relative;
+  padding-bottom:0em;
+}
+
+#progress-horizontal-steps {
+	max-width:320px;
+}
+
+#test1:before{
+ border-bottom: 0.2em solid #00b587;
+  padding: 0 0 0.1em 2em;
+  position: relative;
+  padding-bottom:2em;
+}
+
+
+#progress-horizontal-steps{
+    position: relative;
+    z-index: 1;
+ }
+ 
+#progress-horizontal-steps > div.ui-block-a:before {
+        border-top: 2px solid #dfdfdf;
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+	
+#horz_steps li {
+	display:inline-flex;
+	position: relative;
+    z-index: 1;
+}
+
+
+#horz_steps_container { 
+	float:left;
+   width:100%;
+   overflow:hidden;
+   position:relative;
+}
+
+#horz_steps{
+
+    padding: 0;
+    display:table;
+    width:100%;
+ }
+ 
+ 
+  
+#horz_steps li{
+	display:table-cell;
+}
+#horz_steps li a{
+ display: block;
+  margin: auto;
+
+}
+
+ 
+#horz_steps li:before{
+
+	content: "";
+    display: block;
+    background: #F1F1F1;
+    height: 5px;
+    width: 103%;
+    position: absolute;
+    top: 50%;
+	left:50%;
+
+    
+}
+
+#horz_steps li:last-of-type:before{
+    display: none;
+}
+
+
+</style>
+<body>
+
+<div data-role="page" id="firstmobilepage">
+	  <div data-role="header">
+			<img src="img/u184.png" alt="logo" />
+	  </div>
+
+  <div data-role="content" class="ui-content">
+	  <div id='lifeguard_title'>The Path to a Lifeguard & Swimming Instructor</div>
+	  <div id='lifeguard_subtitle'>We Offer all the courses you need to become an Aquatic Professional</div>
+	  
+	  <a href="#secondmobilepage" data-transition="slide" class="ui-btn ui-corner-all ui-btn-icon-right ui-icon-arrow-r" style="max-width:300px" >Choose your path</a>
+	  <div id='lifeguard_body_text_title'>Choose the right class in your path:</div>
+  </div>
+  
+  <div data-role="footer">
+		<h1>Footer Text</h1>
+  </div>
+</div>
+  
+<div data-role="page" id="secondmobilepage">
+  <div data-role="header">
+  <img src="img/u184.png" alt="logo" />
+  </div>
+
+  <div data-role="content" class="ui-content">
+  
+  <div id="horz_steps_container">
+		<ul id="horz_steps">
+					<li>
+						<a href="#" class="ui-btn round_buttons" ><div class="vertical-align">1</div></a>
+						</li>
+						<li>
+						<a href="#" class="ui-btn round_buttons"><div class="vertical-align">2</div></a>
+						</li>
+						<li>
+						<a href="#" class="ui-btn round_buttons"><div class="vertical-align">3</div></a>
+						</li>
+					
+		</ul>
+  </div>
+  </div>
+  
+  <div id="slick-mobile-container">
+		<div>
+		<p class="step">Select a certification type</p>
+			</br>
+					<div id="category-grid"  class="ui-grid-solo" >
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all " style="height:2.6em;"><div class="vertical-align">Lifeguard</div></a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all ">Lifeguard </br>Instructor</a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">RED CROSS </br>Swimming Instructor</a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">BCRPA </br>Aquafit Instructor</a></div>
+					</div>
+					</br>
+		</div>
+		
+		<div>
+		<p class="step">	Select your age group</p>
+			</br>	
+			<div id="age-grid"  class="ui-grid-solo" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">11-13</div></a></div>
+				<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">13-14</div></a></div>
+				<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">14-15</div></a></div>
+				<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">15-16</div></a></div>
+				<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">16 years& up</div></a></div>
+			</div><!-- /grid-b --> 
+					</br>		
+			</br>
+			</br>
+			</br>					
+		</div>
+		
+		<div id="class-result" style="min-height:350px">
+	
+			<p class="step">Select course</p>
+		
+			<div id="lifeguard" style="display:none;visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				</br>
+				
+				<div id="lifeguard_div_buttons"  class="ui-grid-solo ui-responsive">
+				
+					<div class="ui-block-a" ><a href="#" class="bronze_star ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Bronze Star</div></a></div>	
+					<div class="ui-block-a available_after_age"><p>Available after the age of 13</p></div>	
+					<div class="ui-block-a" ><a href="#" class="bronze_medallion ui-btn ui-corner-all">Bronze Medallion</br>(BM)</a></div>
+					<div class="ui-block-a" ><a href="#" class="bronze_cross ui-btn ui-corner-all">Bronze Cross</br>(BC)</a></div>
+					<div class="ui-block-a available_after_age"><p>Available after the age of 14</p></div>		
+					<div class="ui-block-a"><a href="#" class="standard_first_aid ui-btn ui-corner-all">Standard First Aid</br>(SFA)</a></div>
+					<div class="ui-block-a" ><a href="#" class="bronze_cross ui-btn ui-corner-all">Bronze Cross</br>(BC)</a></div>
+					<div class="ui-block-a available_after_age"><p>Available after the age of 16</p></div>					
+					<div class="ui-block-a"><a href="#" class="national_lifeguard_pool ui-btn ui-corner-all" >National Lifeguard</br>Pool(NL)</a></div>	
+					<div class="ui-block-a"><a href="#" class="national_lifeguard_water_park ui-btn ui-corner-all">National Lifeguard</br>Water Park</a></div>
+				</div><!-- /grid-b --> 					
+			</div>
+			
+			<div id="lifeguard_instructor" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+					<div id="lifeguard_instructor_div_buttons"  class="ui-grid-solo ui-responsive" >
+						<div class="ui-block-a"><a href="#" class="bronze_medallion ui-btn ui-corner-all">Bronze Medalion</br>(BM)</a></div>
+						<div class="ui-block-a"><a href="#" class="bronze_cross ui-btn ui-corner-all">Bronze Cross</br>(BC)</a></div>
+						<div class="ui-block-a available_after_age_general"><p>Available after the age of 16</p></div>
+						<div class="ui-block-a"><a href="#" class="lifesaving_instructor ui-btn ui-corner-all">Lifesaving Instructor </br>(LSI)</a></div>	
+					</div><!-- /grid-b --> 	
+					<div id="lifeguard_instructor_div_sorry"  class="ui-grid-solo ui-responsive" >
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+					</div><!-- /grid-b --> 					
+				</br>
+				<!-- here comes more text -->
+			</div>	
+
+			<div id="red_cross_swimming_instructor" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				<div id="red_cross_swimming_instructor_div_sorry"  class="ui-grid-solo ui-responsive" >
+					<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+				</div><!-- /grid-b --> 				
+				<!-- here comes the text -->
+				<div id="red_cross_swimming_instructor_div_buttons"  class="ui-grid-solo ui-responsive" >
+					<div class="ui-block-a"><a href="#" class="assistant_water_safety_instructor ui-btn ui-corner-all" style="height:2.6em;">Assistant Water</br>Safety Instructor (AWSI)</a></div>
+					<div class="ui-block-a"><a href="#" class="water_safety_instructor ui-btn ui-corner-all" style="height:2.6em;">Water Safety</br>Instructor</a></div>
+				</div><!-- /grid-b --> 					
+				<!-- here comes more text -->
+			</div>
+			
+			<div id="bcrpa_aquafit_instructor" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;" >
+				<div id="bcrpa_aquafit_instructor_div_sorry"  class="ui-grid-solo ui-responsive" >
+					<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+				</div><!-- /grid-b --> 				
+				<!-- here comes the text -->
+				<div id="bcrpa_aquafit_instructor_div_buttons"  class="ui-grid-solo ui-responsive" >
+					<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all fitness_theory" style="height:2.6em;">Fitness Theory</br>Module</a></div>
+					<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all instructor_aquafit" style="height:2.6em;">Instructor Aquafit</br>Module</a></div>
+				</div><!-- /grid-b --> 	
+			</div>			
+</div>
+</div>  <!--id="slick-mobile-container"-->
+
+ <ol class="progress" style="display:none">
+    <li>
+		<p class="step">Step 1</p><p class="afterstep"> Select a category</p>
+			</br>
+					<div id="category-grid"  class="ui-grid-solo" >
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all " style="height:2.6em;"><div class="vertical-align">Lifeguard</div></a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all ">Lifeguard </br>Instructor</a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">RED CROSS </br>Swimming Instructor</a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">BCRPA </br>Aquafit Instructor</a></div>
+					</div>
+					</br>
+	</li>
+    <li>
+		<p class="step">Step 2</p><p class="afterstep"> Select your age group</p>
+			</br>	
+			<div id="age-grid"  class="ui-grid-d" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">11-13</div></a></div>
+				<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">13-14</div></a></div>
+				<div class="ui-block-c"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">14-15</div></a></div>
+				<div class="ui-block-d"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">15-16</div></a></div>
+				<div class="ui-block-e"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">16 years& up</div></a></div>
+			</div><!-- /grid-b --> 
+					</br>		
+</br>
+</br>
+</br>					
+	</li>
+    <li id="class-result" style="min-height:350px">
+	
+			<p class="step">Step 3</p><p class="afterstep"> Select your class</p>
+		
+			<div id="lifeguard" style="display:none;visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				</br>
+				
+				<!-- here comes the text -->
+				<div id="lifeguard_div_available"  class="ui-grid-b">
+				
+					<div class="ui-block-a do_not_display" style="width:20%"><p>empty</p></div>	
+					
+					<div class="available_after_age ui-block-b"><p>Available after the age of 13</p></div>	
+					<div class="available_after_age ui-block-c"><p>Available after the age of 16</p></div>
+				</div><!-- /grid-b --> 	
+				
+				<div id="lifeguard_div_buttons"  class="ui-grid-d ui-responsive" style="display: flex; align-items: stretch;">
+				
+					<div class="ui-block-a" ><a href="#" class="bronze_star ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Bronze Star</div></a></div>	
+					<div class="ui-block-b" ><a href="#" class="bronze_medallion ui-btn ui-corner-all">Bronze Medallion</br>(BM)</a></div>
+					<div class="ui-block-c">
+						<a href="#" class="bronze_cross ui-btn ui-corner-all">Bronze Cross</br>(BC)</a>
+						<a href="#" class="standard_first_aid ui-btn ui-corner-all">Standard First Aid</br>(SFA)</a>
+					</div>
+					<div class="ui-block-d"><a href="#" class="national_lifeguard_pool ui-btn ui-corner-all" style="height:7.2em"><div class="vertical-align">National Lifeguard</br>Pool(NL)</div></a></div>	
+					<div class="ui-block-e"><a href="#" class="national_lifeguard_water_park ui-btn ui-corner-all" style="height:7.2em"><div class="vertical-align">National Lifeguard</br>Water Park</div></a></div>
+				</div><!-- /grid-b --> 	
+				<div id="lifeguard_div_notes"  class="ui-grid-d ui-responsive" >
+					<div class="ui-block-a do_not_display" ><p>empty</p></div>	
+					<div class="ui-block-b do_not_display" ><p>empty</p></div>	
+					<div class="ui-block-c" style="text-align: center;"><p>Standard First Aid (SFA) available after the age of 14</p></div>
+					<div class="ui-block-d do_not_display"><p>empty</p></div>
+					<div class="ui-block-e do_not_display"><p>empty</p></div>	
+				</div><!-- /grid-b --					
+				</br>
+				<!-- here comes more text -->
+			</div>
+			
+			<div id="lifeguard_instructor" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				</br>
+				<!-- here comes the text -->
+				<div id="lifeguard_instructor_div_available"  class="ui-grid-d">
+					<div class="ui-block-a do_not_display" ><p>empty</p></div>	
+					<div class="ui-block-b do_not_display" ><p>empty</p></div>	
+					<div class="ui-block-c do_not_display"><p>empty</p></div>	
+					<div class="ui-block-d available_after_age_general"><p>Available after the age of 16</p></div>
+					<div class="ui-block-e do_not_display"><p>empty</p></div>	
+				</div><!-- /grid-b --> 	
+				<div id="lifeguard_instructor_div_buttons"  class="ui-grid-d ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b"><a href="#" class="bronze_medallion ui-btn ui-corner-all">Bronze Medalion</br>(BM)</a></div>
+					<div class="ui-block-c"><a href="#" class="bronze_cross ui-btn ui-corner-all">Bronze Cross</br>(BC)</a></div>
+					<div class="ui-block-d"><a href="#" class="lifesaving_instructor ui-btn ui-corner-all">Lifesaving Instructor </br>(LSI)</a></div>	
+					
+				</div><!-- /grid-b --> 	
+				<div id="lifeguard_instructor_div_sorry"  class="ui-grid-b ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+					<div class="ui-block-c do_not_display"><p>empty</p></div>	
+					
+				</div><!-- /grid-b --> 					
+				</br>
+				<!-- here comes more text -->
+			</div>	
+
+			<div id="red_cross_swimming_instructor" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;">
+				<div id="red_cross_swimming_instructor_div_sorry"  class="ui-grid-b ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+					<div class="ui-block-c do_not_display"><p>empty</p></div>	
+					
+				</div><!-- /grid-b --> 				
+				<!-- here comes the text -->
+				<div id="red_cross_swimming_instructor_div_buttons"  class="ui-grid-d ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b do_not_display"><p>empty</p></div>	
+					<div class="ui-block-c"><a href="#" class="assistant_water_safety_instructor ui-btn ui-corner-all" style="height:2.6em;">Assistant Water</br>Safety Instructor (AWSI)</a></div>
+					<div class="ui-block-d"><a href="#" class="water_safety_instructor ui-btn ui-corner-all" style="height:2.6em;">Water Safety</br>Instructor</a></div>
+					<div class="ui-block-e do_not_display"><p>empty</p></div>	
+				</div><!-- /grid-b --> 	
+				<div id="red_cross_swimming_instructor_div_notes"  class="ui-grid-d ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b do_not_display"><p>empty</p></div>	
+					<div class="ui-block-c" style="text-align: center;"><p>Prerequisites: SK10</p></div>
+					<div class="ui-block-d do_not_display"><p>empty</p></div>
+					<div class="ui-block-e do_not_display"><p>empty</p></div>	
+				</div><!-- /grid-b --			
+				
+				<!-- here comes more text -->
+			</div>
+			
+			<div id="bcrpa_aquafit_instructor" style="visibility:hidden;opacity:0;transition:opacity 0.5s linear;" >
+				<div id="bcrpa_aquafit_instructor_div_sorry"  class="ui-grid-b ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+					<div class="ui-block-c do_not_display"><p>empty</p></div>	
+					
+				</div><!-- /grid-b --> 				
+				<!-- here comes the text -->
+				<div id="bcrpa_aquafit_instructor_div_buttons"  class="ui-grid-d ui-responsive" >
+					<div class="ui-block-a do_not_display"><p>empty</p></div>	
+					<div class="ui-block-b do_not_display"><p>empty</p></div>	
+					<div class="ui-block-c"><a href="#" class="ui-btn ui-corner-all fitness_theory" style="height:2.6em;">Fitness Theory</br>Module</a></div>
+					<div class="ui-block-d"><a href="#" class="ui-btn ui-corner-all instructor_aquafit" style="height:2.6em;">Instructor Aquafit</br>Module</a></div>
+					<div class="ui-block-e do_not_display"><p>empty</p></div>	
+				</div><!-- /grid-b --> 	
+				<div id="bcrpa_aquafit_instructor_div_notes"  class="ui-grid-d ui-responsive" >
+					<div class="ui-block-a do_not_display" ><p>empty</p></div>	
+					<div class="ui-block-b do_not_display" ><p>empty</p></div>	
+					<div class="ui-block-c do_not_display" ><p>empty</p></div>
+					<div class="ui-block-d" style="text-align: center;"><p>Prerequisites: Fitness Theory, Theory Exam completed, Registered with BCRPA, CPR C valid 3 months past aquafit module</p></div>
+					<div class="ui-block-e  do_not_display"><p>empty</p></div>	
+				</div><!-- /grid-b --			
+				
+				<!-- here comes more text -->
+			</div>			
+	</li>
+</ol> 
+  <!--
+<ol class="progtrckr">
+	<li class="progtrckr-done"><img src="img/u169.png"/></li>
+	<li class="progtrckr-done><img src="img/u169.png"/></li>
+	<li class="progtrckr-done><img src="img/u169.png"/></li>
+	<li class="progtrckr-done><img src="img/u169.png"/></li>
+	<li class="progtrckr-done><img src="img/u169.png"/></li>
+	<li class="progtrckr-done><img src="img/u169.png"/></li>	
+</ol>
+
+	<div class="ui-grid-a">
+            <div class="ui-block-a" style="width:30px"/>
+                    <img src="img/u169.png" style="position: absolute;width:30px" />
+            </div>
+			<div class="ui-block-b" ><p>Step 1 Select a category</p></div>
+    </div>
+  
+	<div class="ui-grid-a">
+            <div class="ui-block-a" style="width:30px">
+                    <div class="line" id="line1"></div>
+            </div>
+			<div class="ui-block-b">
+					<div id="first-grid"  class="ui-grid-c" style="width:1230px">
+						<div class="ui-block-a"><a href="#" class="center-button ui-btn ui-corner-all ui-btn-active">Lifeguard</a></div>
+						<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all ui-btn-active ui-state-persist">Lifeguard </br>Instructor</a></div>
+						<div class="ui-block-c"><a href="#" class="ui-btn ui-corner-all">RED CROSS </br>Swimming Instructor</a></div>
+						<div class="ui-block-d"><a href="#" class="ui-btn ui-corner-all ui-state-disabled">BCRPA </br>Aquafit Instructor</a></div>
+				</div>
+			</div>
+    </div>
+  
+	<div id="first-grid"  class="ui-grid-c ui-responsive table-btns" style="display: flex; align-items: stretch;">
+		<div class="ui-block-a"><a href="#" class="center-button ui-btn ui-corner-all ui-btn-active">Lifeguard</a></div>
+		<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all ui-btn-active ui-state-persist">Lifeguard </br>Instructor</a></div>
+		<div class="ui-block-c"><a href="#" class="ui-btn ui-corner-all">RED CROSS </br>Swimming Instructor</a></div>
+		<div class="ui-block-d"><a href="#" class="ui-btn ui-corner-all ui-state-disabled">BCRPA </br>Aquafit Instructor</a></div>
+	</div>
+	
+	<div id="step2-grid"  class="ui-grid-a ui-responsive table-btns">
+		<div class="ui-block-a"><p>Step 2 Select your age group</p></div>
+	</div>
+  	
+	
+
+	
+	<div id="second-grid"  class="ui-grid-d ui-responsive table-btns" style="display: flex; align-items: stretch;">
+		<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all ui-btn-active">11-13</a></div>
+		<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all ui-btn-active">13-14</a></div>
+		<div class="ui-block-c"><a href="#" class="ui-btn ui-corner-all">14-15</a></div>
+		<div class="ui-block-d"><a href="#" class="ui-btn ui-corner-all">15-16</a></div>
+		<div class="ui-block-e"><a href="#" class="ui-btn ui-corner-all ui-state-disabled">16 years& up</a></div>
+	</div>
+
+	<div id="step3-grid"  class="ui-grid-a ui-responsive table-btns">
+		<div class="ui-block-a"><p>Step 3 Select your class</p></div>
+	</div>
+  	
+	  
+	
+	<div id="third-grid"  class="ui-grid-d ui-responsive table-btns" style="display: flex; align-items: stretch;">
+	
+	
+		<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">Bronze Star</a></div>	
+		<div class="ui-block-b"><a href="#" class="ui-btn ui-corner-all">Bronze Medalion</br>(BM)</a></div>
+		<div class="ui-block-c">
+			<a href="#" class="ui-btn ui-corner-all">Bronze Cross</br>(BC)</a>
+			<a href="#" class="ui-btn ui-corner-all">Standard First Aid</br>(SFA)</a>
+		</div>
+		<div class="ui-block-d"><a href="#" class="ui-btn ui-corner-all" style="height:110px">National Lifeguard</br>Pool(NL)</a></div>	
+		<div class="ui-block-e"><a href="#" class="ui-btn ui-corner-all" style="height:110px">National Lifeguard</br>Water Park</a></div>
+	
+
+	</div>
+
+	--> 	
+
+	
+  </div> 
+  
+
+
+  <div data-role="footer">
+  <h1>Footer Text</h1>
+  </div>
+</div> 
+
+</body>
+</html>

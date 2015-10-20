@@ -1,0 +1,38 @@
+/* ===========================================
+   Defining media queries
+   =========================================== */
+/* ===========================================
+   Mixin for writing out breakpoint names in
+   an after pseudo element
+   =========================================== */
+/* ===========================================
+   Calling our writing-out function
+   =========================================== */
+
+@media only screen and (min-width: 1em) {
+  body:after {
+    content: "bp-very-small";
+    display: none;
+  }
+}
+   
+@media only screen and (min-width: 25em) {
+  body:after {
+    content: "bp-small";
+    display: none;
+  }
+}
+@media only screen and (min-width: 35em) {
+  body:after {
+    content: "bp-medium";
+    display: none;
+  }
+}
+@media only screen and (min-width: 65em) {
+  body:after {
+    content: "bp-large";
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+  
+	<link rel="stylesheet" href="themes/green.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	
+
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="jquery.mobile-1.4.5.js"></script>
+  <script src="jquery.mobile.subpage.js"></script>
+  
+
+  <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/c9e29dd1-fb3c-4230-b1c2-cac3e9f45fc2.css">
+  
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+				
+  <link rel="stylesheet" type="text/css" href="lifeguard_mobile.css"/>				
+
+					<script src="lifeguard_generic_code.js"></script>
+					<script src="test_code_mobile.js"></script>
+</head>
+
+
+<body>
+
+  
+<div data-role="page" id="secondmobilepage" class="secondmobilepage" data-dom-cache="true">
+  <div data-role="header">
+  <img src="img/u184.png" alt="logo" />
+  </div>
+
+	<div data-role="content" class="ui-content">
+
+		<div id="horz_steps_container">
+			<ul id="horz_steps">
+						<li>
+							<a href="#" class="ui-btn round_buttons" ><div class="vertical-align">1</div></a>
+							</li>
+							<li>
+							<a href="#" class="ui-btn round_buttons ui-state-disabled"><div class="vertical-align">2</div></a>
+							</li>
+							<li>
+							<a href="#" class="ui-btn round_buttons ui-state-disabled"><div class="vertical-align">3</div></a>
+							</li>
+						
+			</ul>
+		</div>
+		
+		
+			
+		
+		
+	</div>
+	
+	
+			<div id="slick-mobile-container">
+		  
+				<div>
+					<p class="step">Select a certification type</p>
+					</br>
+							<div id="category-grid"  class="ui-grid-solo" >
+								<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all " style="height:2.6em;"><div class="vertical-align">Lifeguard</div></a></div>
+								<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all ">Lifeguard </br>Instructor</a></div>
+								<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">RED CROSS </br>Swimming Instructor</a></div>
+								<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all">BCRPA </br>Aquafit Instructor</a></div>
+							</div>
+							</br>
+				</div>
+				
+				<div>
+					<p class="step">	Select your age group</p>
+					</br>	
+					<div id="age-grid"  class="ui-grid-solo">
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">11-13</div></a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">13-14</div></a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">14-15</div></a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">15-16</div></a></div>
+						<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">16 years& up</div></a></div>
+					</div><!-- /grid-b --> 
+					</br>		
+					</br>
+					</br>
+					</br>					
+				</div>
+				
+				<div id="class-result" style="min-height:350px">
+					<p class="step">Select course</p>
+					<div id="lifeguard">
+						</br>
+						
+						<div id="lifeguard_div_buttons"  class="ui-grid-solo ui-responsive">
+						<!--	<div class="ui-block-a" ><div class="box" style="height:2.6em;">Bronze Star</div></div>  -->
+							<div class="ui-block-a" ><a href="#" class="bronze_star ui-btn ui-corner-all box" style="height:2.6em;"><div class="vertical-align">Bronze Star</div></a></div>	
+							<div class="ui-block-a available_after_age" id="available_after_age_13"><p>Available after the age of 13</p></div>	
+							<div class="ui-block-a" ><a href="#" class="bronze_medallion ui-btn ui-corner-all box">Bronze Medallion</br>(BM)</a></div>
+							<div class="ui-block-a" ><a href="#" class="bronze_cross ui-btn ui-corner-all box">Bronze Cross</br>(BC)</a></div>
+							<div class="ui-block-a available_after_age" id="available_after_age_14"><p>Available after the age of 14</p></div>		
+							<div class="ui-block-a"><a href="#" class="standard_first_aid ui-btn ui-corner-all box">Standard First Aid</br>(SFA)</a></div>
+							<div class="ui-block-a available_after_age" id="available_after_age_16"><p>Available after the age of 16</p></div>					
+							<div class="ui-block-a"><a href="#" class="national_lifeguard_pool ui-btn ui-corner-all box" >National Lifeguard</br>Pool(NL)</a></div>	
+							<div class="ui-block-a"><a href="#" class="national_lifeguard_water_park ui-btn ui-corner-all box">National Lifeguard</br>Water Park</a></div>
+						</div><!-- /grid-b --> 					
+					</div>
+					
+					<div id="lifeguard_instructor">
+							<div id="lifeguard_instructor_div_buttons"  class="ui-grid-solo ui-responsive" >
+								<div class="ui-block-a"><a href="#" class="bronze_medallion ui-btn ui-corner-all box">Bronze Medalion</br>(BM)</a></div>
+								<div class="ui-block-a"><a href="#" class="bronze_cross ui-btn ui-corner-all box">Bronze Cross</br>(BC)</a></div>
+								<div class="ui-block-a available_after_age_general"><p>Available after the age of 16</p></div>
+								<div class="ui-block-a"><a href="#" class="lifesaving_instructor ui-btn ui-corner-all box">Lifesaving Instructor </br>(LSI)</a></div>	
+							</div><!-- /grid-b --> 	
+							<div id="lifeguard_instructor_div_sorry"  class="ui-grid-solo ui-responsive" >
+								<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+							</div><!-- /grid-b --> 					
+						</br>
+						<!-- here comes more text -->
+					</div>	
+
+					<div id="red_cross_swimming_instructor">
+						<div id="red_cross_swimming_instructor_div_sorry"  class="ui-grid-solo ui-responsive" >
+							<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+						</div><!-- /grid-b --> 				
+						<!-- here comes the text -->
+						<div id="red_cross_swimming_instructor_div_buttons"  class="ui-grid-solo ui-responsive" >
+							<div class="ui-block-a"><a href="#" class="assistant_water_safety_instructor ui-btn ui-corner-all box" style="height:2.6em;">Assistant Water</br>Safety Instructor (AWSI)</a></div>
+							<div class="ui-block-a"><a href="#" class="water_safety_instructor ui-btn ui-corner-all box" style="height:2.6em;">Water Safety</br>Instructor</a></div>
+						</div><!-- /grid-b --> 					
+						<!-- here comes more text -->
+					</div>
+					
+					<div id="bcrpa_aquafit_instructor" >
+						<div id="bcrpa_aquafit_instructor_div_sorry"  class="ui-grid-solo ui-responsive" >
+							<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all" style="height:2.6em;"><div class="vertical-align">Sorry! There is no class available for your age group</div></a></div>
+						</div><!-- /grid-b --> 				
+						<!-- here comes the text -->
+						<div id="bcrpa_aquafit_instructor_div_buttons"  class="ui-grid-solo ui-responsive" >
+							<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all fitness_theory box" style="height:2.6em;">Fitness Theory</br>Module</a></div>
+							<div class="ui-block-a"><a href="#" class="ui-btn ui-corner-all instructor_aquafit box" style="height:2.6em;">Instructor Aquafit</br>Module</a></div>
+						</div><!-- /grid-b --> 	
+					</div>			
+				</div>
+			</div>  <!--id="slick-mobile-container"-->	
+	
+	
+  <div data-role="footer">
+  <h1>Footer Text</h1>
+  </div>	
+  </div> 
+ 
+</body>
+</html>
