@@ -5,6 +5,18 @@ initMobile=false;
 initDesktop=false;
 var lifeguard =  lifeguard || {};
 
+function fixArrows(){
+	console.log(document.querySelector('.small-box'));
+	var afterHeightString = window.getComputedStyle(document.querySelector('.small-box'), ':before').getPropertyValue('height');
+	var afterHeight = parseInt(afterHeightString, 10);
+	$(".small-box").outerHeight(afterHeight);//*0.7071
+	
+	afterHeightString = window.getComputedStyle(document.querySelector('.big-box'), ':before').getPropertyValue('height');
+	afterHeight = parseInt(afterHeightString, 10);
+	$(".big-box").outerHeight(afterHeight);//*0.7071
+	
+}
+
 $(document).on("pagecontainerload", function( event, ui ) {
 	$(window).trigger('resize');
 	console.log("pagecontainerload triggered");
@@ -54,4 +66,8 @@ $(document).on("pagecontainershow", function () {
 			break;
         default:
     }
+	
+	             setTimeout(function(){
+					fixArrows();
+				},0);  
 });

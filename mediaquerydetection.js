@@ -44,7 +44,9 @@ var Z63 = (function (parent, $) {
                 }else{
 				//	console.log("same breakpoint");
 				}
-                
+             	setTimeout(function(){
+					fixArrows();
+				},0);   
             });
         }
 
