@@ -81,8 +81,8 @@ backface-visibility: hidden;
 
 .small-box:before{
 	border:1.5px solid #00679C;
-	width: 4.17em;
-	height: 4.17em;
+	width: 3.6em;
+	height: 3.6em;
   position: absolute;
   left: 100%;
   content: "";
@@ -185,6 +185,29 @@ border-color: #999999 !important;
     font-size: 14px;
     font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
 }
+@media only screen and (min-width: 35em) {
+	.ui-btn {
+		font-size: 12px;
+		height:2.6em;
+		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+
+	}
+}
+@media only screen and (min-width: 65em) {
+	.ui-btn {
+		font-size: 14px;
+		height:2.6em;
+		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+
+	}
+	.ui-content {
+		max-width:90em;
+		align:center;
+		 margin-left: auto ;
+		margin-right: auto ;
+	}
+}
+
 
 
 .ui-focus,
@@ -287,6 +310,17 @@ p.lifeguard_body_text {
 #lifeguard_instructor_p3 .ui-block-c{
 	width:25% !important;
 }
+
+.sorry  div.ui-block-a{
+	width:25% !important;
+}
+.sorry  div.ui-block-b{
+	width:50% !important;
+}
+.sorry  div.ui-block-c{
+	width:25% !important;
+}
+
 
 .vertical-align {
 	text-align: center;
