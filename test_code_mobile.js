@@ -47,6 +47,7 @@ lifeguard.mobile = {
 			//showResultGroup(0);
 		//}
 		this.showResultClasses(categoryIndex,ageIndex);
+		fixArrows();
 	},
 	init_lifeguard: function(){
 		//first enable all buttons and make all visible
