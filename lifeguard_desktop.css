@@ -124,8 +124,8 @@ background-color: #006679C;
 
 
 .box:active:before {
-   background-color: #005570;
-    border-color: #005570;
+   background-color: #00679C;
+    border-color: #00679C;
     color: #ffffff;
 }
 
@@ -160,6 +160,15 @@ background-color: #006679C;
     height: 3em !important;
 	padding: 0.2em !important;
     border-radius: 50% !important;
+	
+	text-shadow:none !important;
+	font-size:14px;
+	font-family:'Univers LT W01 65 Bold', 'Univers LT Std';
+	border-width: 1px;
+	border-style: solid;
+	text-decoration: none;
+	color: #00679C;
+	background-color: #fff;
 
 }
 .progress div a.ui-btn{
@@ -187,7 +196,7 @@ border-color: #999999 !important;
 }
 @media only screen and (min-width: 35em) {
 	.ui-btn {
-		font-size: 12px;
+		font-size: 10px;
 		height:2.6em;
 		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
 
