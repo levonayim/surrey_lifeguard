@@ -14,25 +14,43 @@
     content: "bp-very-small";
     display: none;
   }
+   body:before{ content: "1 bp-very-small fired"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
 }
    
-@media only screen and (min-width: 25em) {
+@media only screen and (min-width:480px) {
   body:after {
     content: "bp-small";
     display: none;
   }
+  body:before{ content: "2 bp-small fired"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
 }
-@media only screen and (min-width: 35em) {
+
+@media only screen and (min-width:600px) {
   body:after {
     content: "bp-medium";
     display: none;
   }
+  body:before{ content: "3 bp-medium fired"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
 }
-@media only screen and (min-width: 65em) {
+
+@media only screen and (max-width:700px) 
+	and (orientation: landscape) 
+	and (-webkit-min-device-pixel-ratio: 2){
+  body:after {
+    content: "bp-small";
+    display: none;
+  }
+  body:before{ content: "2.2 bp-small fired"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
+}
+
+
+
+@media only screen and (min-width:801px) {
   body:after {
     content: "bp-large";
     display: none;
   }
+  body:before{ content: "4 bp-large fired"; font-weight: bold; display: block; text-align: center; background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */ position: absolute; top: 0; left: 0; right: 0; z-index: 99; } 
 }
 
 
