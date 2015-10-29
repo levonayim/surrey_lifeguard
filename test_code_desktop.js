@@ -2,6 +2,24 @@ lifeguard =  lifeguard || {};
 
 lifeguard.desktop = {
 	target:'.desktoppage',
+	fixArrows: function(){
+		var box = document.querySelector('.small-box');
+		if (typeof box === "undefined" || box === null) {
+			return;
+		}
+		var afterHeightString = window.getComputedStyle(box, ':before').getPropertyValue('height');
+		var afterHeight = parseInt(afterHeightString, 10);
+		$(".small-box", this.target).outerHeight(afterHeight);//*0.7071
+		
+		
+		box = document.querySelector('.big-box');
+		if (typeof box === "undefined" || box === null) {
+			return;
+		}
+		afterHeightString = window.getComputedStyle(box, ':before').getPropertyValue('height');
+		afterHeight = parseInt(afterHeightString, 10);
+		$(".big-box", this.target).outerHeight(afterHeight);//*0.7071		
+	},	
 	showResultGroup: function(index){
 		console.log( "showResultGroup..." );
 		
@@ -43,7 +61,7 @@ lifeguard.desktop = {
 			//showResultGroup(0);
 		//}
 		this.showResultClasses(categoryIndex,ageIndex);
-		fixArrows();
+		this.fixArrows();
 	},
 	init_lifeguard: function(){
 		//first enable all buttons and make all visible

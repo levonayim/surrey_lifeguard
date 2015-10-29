@@ -2,6 +2,15 @@ lifeguard =  lifeguard || {};
 
 lifeguard.mobile = {
 	target:'.secondmobilepage',
+	fixArrows: function(){
+		var box = document.querySelector('.small-box');
+		if (typeof box === "undefined" || box === null) {
+			return;
+		}
+		var afterHeightString = window.getComputedStyle(box, ':before').getPropertyValue('height');
+		var afterHeight = parseInt(afterHeightString, 10);
+		$(".small-box", this.target).outerHeight(afterHeight);//*0.7071
+	},
 	showResultGroup: function(index){
 		console.log( "showResultGroup("+index+")" );
 		
@@ -47,7 +56,7 @@ lifeguard.mobile = {
 			//showResultGroup(0);
 		//}
 		this.showResultClasses(categoryIndex,ageIndex);
-		fixArrows();
+		this.fixArrows();
 	},
 	init_lifeguard: function(){
 		//first enable all buttons and make all visible
