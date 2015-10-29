@@ -335,9 +335,13 @@ p.lifeguard_body_text {
 	text-align: center;
     position: relative;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);	
+	
 }
 
 ol.progtrckr {
@@ -403,8 +407,9 @@ p.afterstep {
  
 /** andrei: dont like padding here **/ 
   /**levonaEdited**/
- // padding:0 12%;
+ /* //padding:0 12%;
 	//max-width:60em;
+	*/
  	align:center;
 	margin-left: 2em;
 	margin-right: 2em;

@@ -3,8 +3,7 @@ var Z63 = (function (parent, $) {
 
     var MediaQueryListener = function() {
         
-		console.log("init:");
-		console.log(document.body);
+		console.log("Z63 init:");
 		this.afterElement =  window.getComputedStyle ? window.getComputedStyle(document.body, ':after') : false;
         this.currentBreakpoint = '';
         this.lastBreakpoint = '';
@@ -43,10 +42,7 @@ var Z63 = (function (parent, $) {
 					//},0);
                 }else{
 				//	console.log("same breakpoint");
-				}
-             	setTimeout(function(){
-					fixArrows();
-				},0);   
+				}  
             });
         }
 
@@ -65,18 +61,19 @@ $(window).on('breakpoint-change', function(e, breakpoint) {
 		console.log("bp-very-small");
 		if (activePage=="startpage" ||  activePage=="desktoppage")
 			$.mobile.pageContainer.pagecontainer("change", "#firstmobilepage", {});
+		
     }
 	
     if(breakpoint === 'bp-small') {
 		console.log("bp-small");
 		if (activePage=="startpage" ||  activePage=="desktoppage")
 		$.mobile.pageContainer.pagecontainer("change", "#firstmobilepage", {});
+		
     }
 
     if(breakpoint === 'bp-medium') {
 		console.log("bp-medium");
 		if ( activePage=="startpage" || activePage=="firstmobilepage" || activePage=="secondmobilepage" ){
-			console.log("TRU bp-medium!!!!");
 			$.mobile.pageContainer.pagecontainer("change", "#desktoppage", {});
 		}
     }
@@ -85,10 +82,8 @@ $(window).on('breakpoint-change', function(e, breakpoint) {
 		console.log("bp-large");
 		console.log("trying a transition to big..., activePage:"+activePage);
 		if (activePage=="startpage" || activePage=="firstmobilepage" || activePage=="secondmobilepage"){
-			console.log("TRU!!!!");
 			$.mobile.pageContainer.pagecontainer("change", "#desktoppage", {});
 		}
-		//$.mobile.pageContainer.pagecontainer("change", "#firstmobilepage", {});
     }
 
 });
