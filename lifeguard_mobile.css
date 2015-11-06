@@ -344,7 +344,7 @@ p.afterstep {
   padding-bottom:2em;
 }
 .progress li::before {
-  content: url("img/u169.png");
+  content: "";
   font-size: 2.5em;
   position: absolute;
   left: -0.41em;
