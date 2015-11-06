@@ -7,9 +7,9 @@ var lifeguard =  lifeguard || {};
 
 
 $(document).on("pagecontainerload", function( event, ui ) {
-	$(window).trigger('resize');
+	//$(window).trigger('resize');
 	console.log("pagecontainerload triggered");
-	//setTimeout(function(){$(window).trigger('resize');},1000);
+	setTimeout(function(){$(window).trigger('resize');});
 	//$.mobile.pageContainer.pagecontainer("change", "#desktoppage", {});
 
 } );

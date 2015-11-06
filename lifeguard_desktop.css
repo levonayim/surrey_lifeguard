@@ -447,11 +447,10 @@ p.afterstep {
 	font-family: 'Univers LT W01 45 Light', 'Univers LT Std';
 	font-style:normal;
 	font-size:12px;
-	padding-left:11%;
+	    margin-left: -1em;
 	color:#e45125;
-	margin: 0 0 -0.5em 0;
 }
 
 h3.stepsGeneral{
-	margin:0;
+	
 }
