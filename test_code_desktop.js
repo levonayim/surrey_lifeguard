@@ -28,29 +28,30 @@ lifeguard.desktop = {
 		
 		//then display only the coresponding one
 		if (index == 0) {
+				console.log("showing the lifeguard id");
 				$('#lifeguard',this.target).css('display', '');
-				setTimeout(function(){
-					$('#lifeguard',this.target).css( "visibility", "visible" );
-					$('#lifeguard',this.target).css( "opacity", "1" );
-				}, 0);
+				setTimeout(function(target){
+					$('#lifeguard',target).css( "visibility", "visible" );
+					$('#lifeguard',target).css( "opacity", "1" );
+				}(this.target), 0);
 		}else if (index == 1) {
 			$("#lifeguard_instructor",this.target).css('display', '');
-				setTimeout(function(){
-					$('#lifeguard_instructor',this.target).css( "visibility", "visible" );
-					$('#lifeguard_instructor',this.target).css( "opacity", "1" );
-				}, 0);		
+				setTimeout(function(target){
+					$('#lifeguard_instructor',target).css( "visibility", "visible" );
+					$('#lifeguard_instructor',target).css( "opacity", "1" );
+				}(this.target), 0);		
 		}else if (index == 2) {
 			$("#red_cross_swimming_instructor",this.target).css('display', '');
-				setTimeout(function(){
-					$('#red_cross_swimming_instructor',this.target).css( "visibility", "visible" );
-					$('#red_cross_swimming_instructor',this.target).css( "opacity", "1" );
-				}, 0);		
+				setTimeout(function(target){
+					$('#red_cross_swimming_instructor',target).css( "visibility", "visible" );
+					$('#red_cross_swimming_instructor',target).css( "opacity", "1" );
+				}(this.target), 0);		
 		}else if (index == 3) {
 			$("#bcrpa_aquafit_instructor",this.target).css('display', '');
-				setTimeout(function(){
-					$('#bcrpa_aquafit_instructor',this.target).css( "visibility", "visible" );
-					$('#bcrpa_aquafit_instructor',this.target).css( "opacity", "1" );
-				}, 0);			
+				setTimeout(function(target){
+					$('#bcrpa_aquafit_instructor',target).css( "visibility", "visible" );
+					$('#bcrpa_aquafit_instructor',target).css( "opacity", "1" );
+				}(this.target), 0);			
 		}
 	},
 	computeResult: function(){
