@@ -367,6 +367,19 @@ lifeguard.desktop = {
 			console.log( $(this).parent().index() +" and categoryIndex is: "+categoryIndex);
 			lifeguard.desktop.computeResult();
 		});
+		
+	$("#class-result div a",target).click(function(){
+		//console.log("this is the button!!!");
+		//console.log($(this).attr("class").split(' '));
+		$(this).attr("class").split(' ').forEach(function(myClass) {
+			
+			if(result_urls.hasOwnProperty(myClass)){
+				var url_to_open=result_urls[myClass];
+				window.open(url_to_open, '_blank'); 
+				return;
+			}
+		});
+	});		
 			initDesktop=true;
 	}
 };

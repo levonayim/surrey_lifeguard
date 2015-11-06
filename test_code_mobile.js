@@ -322,6 +322,20 @@ lifeguard.mobile = {
 		lifeguard.mobile.computeResult();
 		$('#slick-mobile-container').slick("slickGoTo",1,false);
     });
+	
+	$("#class-result div a",target).click(function(){
+		//console.log("this is the button!!!");
+		//console.log($(this).attr("class").split(' '));
+		$(this).attr("class").split(' ').forEach(function(myClass) {
+			
+			if(result_urls.hasOwnProperty(myClass)){
+				var url_to_open=result_urls[myClass];
+				window.open(url_to_open, '_blank'); 
+				return;
+			}
+		});
+	});
+	
 	initMobile=true;
 }
 };
