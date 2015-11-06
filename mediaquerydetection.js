@@ -1,9 +1,15 @@
 'use strict';
 var Z63 = (function (parent, $) {
 
+	
     var MediaQueryListener = function() {
         
 		console.log("Z63 init:");
+		console.log(document.body);
+		if (document.body==null){
+			console.log("try again later");
+			//return;
+		}
 		this.afterElement =  window.getComputedStyle ? window.getComputedStyle(document.body, ':after') : false;
         this.currentBreakpoint = '';
         this.lastBreakpoint = '';
@@ -40,9 +46,15 @@ var Z63 = (function (parent, $) {
 						$(window).trigger('breakpoint-change', self.currentBreakpoint);
 						self.lastBreakpoint = self.currentBreakpoint;
 					//},0);
+					
+
+					
                 }else{
 				//	console.log("same breakpoint");
 				}  
+				
+				lifeguard.mobile.fixArrows();
+				lifeguard.desktop.fixArrows();
             });
         }
 
