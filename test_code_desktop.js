@@ -28,25 +28,25 @@ lifeguard.desktop = {
 		
 		//then display only the coresponding one
 		if (index == 0) {
-				$('#lifeguard',this.target).prop('style').removeProperty('display');
+				$('#lifeguard',this.target).css('display', '');
 				setTimeout(function(){
 					$('#lifeguard',this.target).css( "visibility", "visible" );
 					$('#lifeguard',this.target).css( "opacity", "1" );
 				}, 0);
 		}else if (index == 1) {
-			$("#lifeguard_instructor",this.target).prop('style').removeProperty('display');
+			$("#lifeguard_instructor",this.target).css('display', '');
 				setTimeout(function(){
 					$('#lifeguard_instructor',this.target).css( "visibility", "visible" );
 					$('#lifeguard_instructor',this.target).css( "opacity", "1" );
 				}, 0);		
 		}else if (index == 2) {
-			$("#red_cross_swimming_instructor",this.target).prop('style').removeProperty('display');
+			$("#red_cross_swimming_instructor",this.target).css('display', '');
 				setTimeout(function(){
 					$('#red_cross_swimming_instructor',this.target).css( "visibility", "visible" );
 					$('#red_cross_swimming_instructor',this.target).css( "opacity", "1" );
 				}, 0);		
 		}else if (index == 3) {
-			$("#bcrpa_aquafit_instructor",this.target).prop('style').removeProperty('display');
+			$("#bcrpa_aquafit_instructor",this.target).css('display', '');
 				setTimeout(function(){
 					$('#bcrpa_aquafit_instructor',this.target).css( "visibility", "visible" );
 					$('#bcrpa_aquafit_instructor',this.target).css( "opacity", "1" );
@@ -66,39 +66,39 @@ lifeguard.desktop = {
 	init_lifeguard: function(){
 		//first enable all buttons and make all visible
 		$('#lifeguard_div_buttons a',this.target).removeClass("ui-state-disabled");
-		$('#lifeguard_div_buttons a',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_div_buttons a',this.target).css( "visibility", "visible" );
 		
 		$('#lifeguard_div_buttons a',this.target).removeClass("ui-btn-active");
 		
 		//make both Available after the age visible
-		$('#lifeguard_div_available .available_after_age',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_div_available .available_after_age',this.target).css( "visibility", "visible" );
 		
 		//show sfa text
-		$('#lifeguard_div_notes .ui-block-c',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_div_notes .ui-block-c',this.target).css( "visibility", "visible" );
 	},
 
 	init_lifeguard_instructor: function(){
 	
-		$('#lifeguard_instructor_div_available',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_instructor_div_available',this.target).css( "visibility", "visible" );
 		
-		$('#lifeguard_instructor_div_available',this.target).prop('style').removeProperty('display');
-		$('#lifeguard_instructor_div_buttons',this.target).prop('style').removeProperty('display');
-		$('#lifeguard_instructor_div_sorry',this.target).prop('style').removeProperty('display');
+		$('#lifeguard_instructor_div_available',this.target).css('display', '');
+		$('#lifeguard_instructor_div_buttons',this.target).css('display', '');
+		$('#lifeguard_instructor_div_sorry',this.target).css('display', '');
 		
 		//first enable all buttons and make all visible
 		$('#lifeguard_instructor_div_buttons a',this.target).removeClass("ui-state-disabled");
 		$('#lifeguard_instructor_div_buttons a',this.target).removeClass("ui-btn-active");
 
 		
-		$('#lifeguard_instructor_div_buttons a',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_instructor_div_buttons a',this.target).css( "visibility", "visible" );
 		
 		//make both Available after the age visible
-		$('#lifeguard_instructor_div_available .available_after_age_general',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_instructor_div_available .available_after_age_general',this.target).css( "visibility", "visible" );
 		
 		//
 		$('#lifeguard_instructor_div_sorry a',this.target).removeClass("ui-state-disabled");
-		$('#lifeguard_instructor_div_sorry a',this.target).prop('style').removeProperty('visibility');
-		$('#lifeguard_instructor_div_sorry',this.target).prop('style').removeProperty('visibility');
+		$('#lifeguard_instructor_div_sorry a',this.target).css( "visibility", "visible" );
+		$('#lifeguard_instructor_div_sorry',this.target).css( "visibility", "visible" );
 		
 		
 	//	$('#lifeguard_instructor_div_sorry').css( "visibility", "hidden" );
@@ -106,37 +106,37 @@ lifeguard.desktop = {
 
 	init_red_cross_swimming_instructor: function(){
 		
-		$('#red_cross_swimming_instructor_div_sorry',this.target).prop('style').removeProperty('display');
-		$('#red_cross_swimming_instructor_div_buttons',this.target).prop('style').removeProperty('display');
-		$('#red_cross_swimming_instructor_div_notes',this.target).prop('style').removeProperty('display');
+		$('#red_cross_swimming_instructor_div_sorry',this.target).css('display', '');
+		$('#red_cross_swimming_instructor_div_buttons',this.target).css('display', '');
+		$('#red_cross_swimming_instructor_div_notes',this.target).css('display', '');
 		
 		//first enable all buttons and make all visible
 		$('#red_cross_swimming_instructor_div_buttons a',this.target).removeClass("ui-state-disabled");
-		$('#red_cross_swimming_instructor_div_buttons a',this.target).prop('style').removeProperty('visibility');
+		$('#red_cross_swimming_instructor_div_buttons a',this.target).css( "visibility", "visible" );
 		
 		//make both Available after the age visible
 		$('#red_cross_swimming_instructor_div_sorry a',this.target).removeClass("ui-state-disabled");
-		$('#red_cross_swimming_instructor_div_sorry a',this.target).prop('style').removeProperty('visibility');
+		$('#red_cross_swimming_instructor_div_sorry a',this.target).css( "visibility", "visible" );
 		
 		//
-		$('#red_cross_swimming_instructor_div_notes',this.target).prop('style').removeProperty('visibility');
+		$('#red_cross_swimming_instructor_div_notes',this.target).css( "visibility", "visible" );
 	},
 	init_bcrpa_aquafit_instructor: function(){
 		
-		$('#bcrpa_aquafit_instructor_div_sorry',this.target).prop('style').removeProperty('display');
-		$('#bcrpa_aquafit_instructor_div_buttons',this.target).prop('style').removeProperty('display');
-		$('#bcrpa_aquafit_instructor_div_notes',this.target).prop('style').removeProperty('display');
+		$('#bcrpa_aquafit_instructor_div_sorry',this.target).css('display', '');
+		$('#bcrpa_aquafit_instructor_div_buttons',this.target).css('display', '');
+		$('#bcrpa_aquafit_instructor_div_notes',this.target).css('display', '');
 		
 		//first enable all buttons and make all visible
 		$('#bcrpa_aquafit_instructor_div_buttons a',this.target).removeClass("ui-state-disabled");
-		$('#bcrpa_aquafit_instructor_div_buttons a',this.target).prop('style').removeProperty('visibility');
+		$('#bcrpa_aquafit_instructor_div_buttons a',this.target).css( "visibility", "visible" );
 		
 		//make both Available after the age visible
 		$('#bcrpa_aquafit_instructor_div_sorry a',this.target).removeClass("ui-state-disabled");
-		$('#bcrpa_aquafit_instructor_div_sorry a',this.target).prop('style').removeProperty('visibility');
+		$('#bcrpa_aquafit_instructor_div_sorry a',this.target).css( "visibility", "visible" );
 		
 		//
-		$('#bcrpa_aquafit_instructor_div_notes',this.target).prop('style').removeProperty('visibility');
+		$('#bcrpa_aquafit_instructor_div_notes',this.target).css( "visibility", "visible" );
 	},
 
 	processResult_lifeguard: function (ageIndex){
@@ -168,13 +168,13 @@ lifeguard.desktop = {
 				$('#bronze_cross').removeClass("ui-state-disabled");
 				
 				
-				$('#lifeguard #lifeguard_div_available .available_after_age').prop('style').removeProperty('visibility');
+				$('#lifeguard #lifeguard_div_available .available_after_age').css( "visibility", "visible" );
 				$('#lifeguard #lifeguard_div_available .ui-block-b').css( "visibility", "hidden" );
 				
 				$('#bronze_star').css( "visibility", "hidden" );
 				
 				//show sfa text
-				$('#lifeguard #lifeguard_div_notes .ui-block-c').prop('style').removeProperty('visibility');
+				$('#lifeguard #lifeguard_div_notes .ui-block-c').css( "visibility", "visible" );
 				*/
 			} else if (ageIndex == 2){
 				$('#lifeguard .bronze_star',this.target).css( "visibility", "hidden" );
@@ -261,13 +261,13 @@ lifeguard.desktop = {
 				$('#bronze_cross').removeClass("ui-state-disabled");
 				
 				
-				$('#lifeguard #lifeguard_div_available .available_after_age').prop('style').removeProperty('visibility');
+				$('#lifeguard #lifeguard_div_available .available_after_age').css( "visibility", "visible" );
 				$('#lifeguard #lifeguard_div_available .ui-block-b').css( "visibility", "hidden" );
 				
 				$('#bronze_star').css( "visibility", "hidden" );
 				
 				//show sfa text
-				$('#lifeguard #lifeguard_div_notes .ui-block-c').prop('style').removeProperty('visibility');
+				$('#lifeguard #lifeguard_div_notes .ui-block-c').css( "visibility", "visible" );
 				*/
 			} else if (ageIndex == 2){
 				//$('#lifeguard_instructor_div_buttons .bronze_medallion').addClass("ui-btn-active");
