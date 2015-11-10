@@ -163,7 +163,7 @@ background-color: #006679C;
 	
 	text-shadow:none !important;
 	font-size:14px;
-	font-family:'Univers LT W01 65 Bold', 'Univers LT Std';
+	font-family:'Univers LT W01 65 Bold','Univers LT W01 65 Bold Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 	border-width: 1px;
 	border-style: solid;
 	text-decoration: none;
@@ -192,13 +192,13 @@ border-color: #999999 !important;
 
 .ui-btn {
     font-size: 14px;
-    font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+    font-family: 'Univers LT W02 55 Roman', 'Univers LT W02 55 Roman Standalone','Univers LT Std','Univers LT Std Standalone';
 }
 @media only screen and (min-width: 35em) {
 	.ui-btn {
 		font-size: 10px;
 		height:2.6em;
-		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+		font-family: 'Univers LT W02 55 Roman','Univers LT W02 55 Roman Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 
 	}
 }
@@ -206,7 +206,7 @@ border-color: #999999 !important;
 	.ui-btn {
 		font-size: 14px;
 		height:2.6em;
-		font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+		font-family: 'Univers LT W02 55 Roman', 'Univers LT W02 55 Roman Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 
 	}
 	.ui-content {
@@ -241,7 +241,7 @@ border-color: #999999 !important;
 }
 
 #lifeguard_title {
-	font-family: 'Univers LT W01 65 Bold', 'Univers LT Std';
+	font-family: 'Univers LT W01 65 Bold', 'Univers LT W01 65 Bold Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 	/**font-weight: 700;**/
 	font-style: normal;
 	font-size: 40px;
@@ -251,7 +251,8 @@ border-color: #999999 !important;
 }
 
 #lifeguard_subtitle {
-	font-family: 'Univers LT W01 45 Light', 'Univers LT Std';
+	font-family: 'Univers LT W01 45 Light','Univers LT Std from local';
+	/**font-family: 'Univers LT W01 45 Light', 'Univers LT W01 45 Light Standalone', 'Univers LT Std', 'Univers LT Std Standalone';**/
 	/**font-weight: 400;**/
 	font-style: normal;
 	font-size: 18px;
@@ -263,7 +264,7 @@ border-color: #999999 !important;
 #lifeguard_body_text_title {
 	/**color:#1AB394;**/
 	color:#00679C;
-	font-family: 'Univers LT W01 65 Bold', 'Univers LT Std';
+	font-family: 'Univers LT W01 65 Bold','Univers LT W01 65 Bold Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 	/**font-weight: 700;**/
 	font-style: normal;
 	font-size: 18px;
@@ -275,7 +276,7 @@ border-color: #999999 !important;
 }
 
 p.lifeguard_body_text {
-	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT W02 55 Roman Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 	font-weight: 400;
 	font-style: normal;
 	font-size: 16px;
@@ -290,7 +291,7 @@ p.lifeguard_body_text {
 	text-align: center;
 	color: #999999;
 	font-size: 14px;
-	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-family: 'Univers LT W02 55 Roman','Univers LT W02 55 Roman Standalone', 'Univers LT Std', 'Univers LT Std Standalone';
 }
 .available_after_age p{
 	margin-left:10px;
@@ -298,7 +299,7 @@ p.lifeguard_body_text {
 	color: #999999;
 	border-bottom: 0.1em solid #999999;
 	font-size: 14px;
-	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT W02 55 Roman Standalone','Univers LT Std', 'Univers LT Std Standalone';
 }
 .available_after_age_general p{
 	margin-left:10px;
@@ -307,7 +308,7 @@ p.lifeguard_body_text {
 	color: #999999;
 	border-bottom: 0.1em solid #999999;
 	font-size: 14px;
-	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-family: 'Univers LT W02 55 Roman', 'Univers LT W02 55 Roman Standalone' , 'Univers LT Std', 'Univers LT Std Standalone';
 }
 
 #lifeguard_instructor_p3 .ui-block-a{
@@ -356,7 +357,7 @@ ol.progtrckr li.progtrckr-done {
 }
 
 p.step {
-	font-family: 'Univers LT W02 55 Roman', 'Univers LT Std';
+	font-family: 'Univers LT W02 55 Roman','Univers LT W02 55 Roman Standalone', 'Univers LT Std',  'Univers LT Std Standalone';
 	font-weight: 400;
 	font-style: normal;
 	font-size: 16px;
@@ -367,7 +368,7 @@ p.step {
 	margin-bottom:0px;
 }
 p.afterstep {
-	font-family: 'Univers LT W01 45 Light', 'Univers LT Std';
+	font-family: 'Univers LT W01 45 Light', 'Univers LT W01 45 Light Standalone','Univers LT Std','Univers LT Std Standalone';
 	font-weight: 400;
 	font-style: normal;
 	font-size: 16px;
@@ -444,7 +445,7 @@ p.afterstep {
 }
 
 .stepHeader{
-	font-family: 'Univers LT W01 45 Light', 'Univers LT Std';
+	font-family: 'Univers LT W01 45 Light','Univers LT W01 45 Light Standalone', 'Univers LT Std','Univers LT Std Standalone';
 	font-style:normal;
 	font-size:12px;
 	    margin-left: -1em;
